@@ -1,0 +1,43 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+$main-color1: #F0E3CA;
+$main-color2: #FF8303;
+$main-color3: #A35709;
+$main-color4: #2b2b2b;
+
+.color1-background {
+    background-color: $main-color1;
+}
+
+.color2-background {
+    background-color: $main-color2;
+}
+
+.color3-background {
+    background-color: $main-color3;
+}
+
+.color4-background {
+    background-color: $main-color4;
+}
+
+.orange-title {
+    font-size: 32px;
+    font-weight: 400;
+    color: $main-color4;
+}
+
+.img-center {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
