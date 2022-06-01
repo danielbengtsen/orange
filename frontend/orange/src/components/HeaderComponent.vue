@@ -13,7 +13,7 @@
                 alt="Logo"
                 class="shrink mr-2"
                 contain
-                src="../assets/logo.png"
+                src="../assets/img/logo.png"
                 transition="scale-transition"
                 width="40"
                 />
@@ -28,7 +28,7 @@
         >
             <v-btn
                 color="#FF8303"
-                text="#FF8303"
+                :text="true"
             >
                 Login
             </v-btn>

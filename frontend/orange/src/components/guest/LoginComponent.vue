@@ -51,7 +51,7 @@
     data: () => ({
         user: '',
         password: '',
-        boatAudio: new Audio(require('../../audio/den-baad-der.mp3')),
+        boatAudio: new Audio(require('../../assets/audio/den-baad-der.mp3')),
         passwordRules: [
             v => v.length >= 8 || 'Min 8 characters',
         ],
