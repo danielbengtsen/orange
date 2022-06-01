@@ -22,26 +22,67 @@
 
         <v-spacer></v-spacer>
 
-        <router-link
-            style="text-decoration: none; color: inherit;"
-            to="/login"
-        >
+        <template v-if="isLoggedIn">
+            <router-link
+                style="text-decoration: none; color: inherit;"
+                to="/tv-booking"
+            >
+                <v-btn
+                    color="#FF8303"
+                    :text="true"
+                >
+                    TV Booking
+                </v-btn>
+            </router-link>
+        </template>
+
+        <v-spacer></v-spacer>
+
+        <template v-if="isLoggedIn">
             <v-btn
                 color="#FF8303"
                 :text="true"
+                @click="logout"
             >
-                Login
+                Logout
             </v-btn>
-        </router-link>
+        </template>
+        <template>
+            <router-link
+                style="text-decoration: none; color: inherit;"
+                to="/login"
+            >
+                <v-btn
+                    color="#FF8303"
+                    :text="true"
+                >
+                    Login
+                </v-btn>
+            </router-link>
+        </template>
     </v-app-bar>
 </template>
 
 <script>
 export default {
-  name: 'HeaderComponent',
+    name: 'HeaderComponent',
 
-  data: () => ({
-    //
-  }),
+    data: () => ({
+        //
+    }),
+
+    computed : 
+    {
+      isLoggedIn: function(){ return this.$store.getters.isAuthenticated; }
+    },
+
+    methods: 
+    {
+        async logout ()
+        {
+            await this.$store.dispatch('LogOut');
+            this.$router.push('/login');
+        }
+    },
 };
 </script>
